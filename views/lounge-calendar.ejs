@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--WELCOME TO THE OFFICIAL WEBSITE OF THE ENGINEERING SOCIETY OF UCLA-->
+
+	<!--META BEGIN-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="keywords" content="esuc, engineering society of ucla, ucla, engineering, society, university of california, university of california, los angeles">
+	<meta name="description" content="The Engineering Society of UCLA (ESUC) is the umbrella organization for all of the various engineering and technical societies at UCLA.">
+	<meta name="author" content="Vic Yeh">
+	<!--META END-->
+	<title>Engineering Society of UCLA</title>
+	<!--LINKS BEGIN-->
+	<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link href='lib/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+	<link href='lib/bootstrap/css/bootstrap-theme.min.css' rel='stylesheet' type='text/css'>
+
+	<link href='css/reset.css' rel='stylesheet' type='text/css'>
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<!--LINKS END-->
+	<!--CDN BEGIN-->
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+	<!--CDN END-->
+	<!--LOCAL BEGIN-->
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="js/.js"></script>-->
+	<!--LOCAL END-->
+
+</head>
+
+<body>
+<!--HEADER BEGIN-->
+<div>
+	<% include partial/header %>
+</div>
+<!--HEADER END-->
+
+
+<div class="container">
+
+	<div id="gallery-carousel" class="carousel slide"><!-- class of slide for animation -->
+	  <div class="carousel-inner">
+	    <div class="item active"><!-- class of active since it's the first item -->
+	      <img class="carouselImg" src="img/covers/6.jpg" alt="failed to load the image" />
+	    </div>
+	  </div><!-- /.carousel-inner -->
+	</div><!-- /.carousel -->
+
+	<div class="main-section">
+		<div class="row">
+			<div class="section col-md-12">
+				<div class="section-title">Lounge Calendar</div>
+				<p>
+					Now that our newly renovated lounge has opened in Winter 2012, you can come sit in during the events hosted by the various engineering groups we have on campus!
+				</p>
+				<p>Engineering groups may book the lounge via our <a href="/reservation">online reservation form</a>.</p>
+			</div>
+
+			<!--CALENDAR BEGIN-->
+			<div class="section col-md-12">
+				<iframe src="https://www.google.com/calendar/embed?src=esuc.webmaster%40gmail.com&amp;ctz=America/Los_Angeles" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>		
+			</div>
+			<!--CALENDAR END-->
+		</div>
+	</div>
+</div>
+
+<!--FOOTER BEGIN-->
+<div>
+	<% include partial/footer %>
+</div>
+<!--FOOTER END-->
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--WELCOME TO THE OFFICIAL WEBSITE OF THE ENGINEERING SOCIETY OF UCLA-->
+
+	<!--META BEGIN-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="keywords" content="esuc, engineering society of ucla, ucla, engineering, society, university of california, university of california, los angeles">
+	<meta name="description" content="The Engineering Society of UCLA (ESUC) is the umbrella organization for all of the various engineering and technical societies at UCLA.">
+	<meta name="author" content="Vic Yeh">
+	<!--META END-->
+	<title>Engineering Society of UCLA</title>
+	<!--LINKS BEGIN-->
+	<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link href='lib/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+	<link href='lib/bootstrap/css/bootstrap-theme.min.css' rel='stylesheet' type='text/css'>
+
+	<link href='css/reset.css' rel='stylesheet' type='text/css'>
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<!--LINKS END-->
+	<!--CDN BEGIN-->
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+	<!--CDN END-->
+	<!--LOCAL BEGIN-->
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="js/.js"></script>-->
+	<!--LOCAL END-->
+
+</head>
+
+<body>
+<!--HEADER BEGIN-->
+<div>
+	<% include partial/header %>
+</div>
+<!--HEADER END-->
+
+
+<div class="container">
+
+	<div id="gallery-carousel" class="carousel slide"><!-- class of slide for animation -->
+	  <div class="carousel-inner">
+	    <div class="item active"><!-- class of active since it's the first item -->
+	      <img class="carouselImg" src="img/covers/8.jpg" alt="failed to load the image" />
+	    </div>
+	  </div><!-- /.carousel-inner -->
+	</div><!-- /.carousel -->
+
+	<div class="main-section">
+		<div class="row">
+			<!--DESCRIPTION BEGIN-->
+			<div class="section col-md-12">
+				<div class="section-title">Donate to ESUC</div>
+				<p>
+					As a student run organization, ESUC depends on donations and limited funds provided by the UCLA School of Engineering. You may choose to donate to a specific ESUC event or to general ESUC club funds.
+				</p>	
+				<div class="row" style="margin-top:20px">
+					<div class="col-md-12">
+						<table class="table table-hover">
+						  <caption style="font-size:20px;margin-bottom:5px;">Sponsorship Packages</caption>
+						  <tr>
+						    <th>
+						    	Gold - $1,000+
+						    </th>
+						    <th>
+						   		<li>Logo: please send us your logo ASAP</li>
+						   		<li>Full page newsletter ad</li>
+						    	<li>E-Week tabling request</li>
+						    	<li>Submit poster for ESUC sponsorship wall</li>
+						    </th>
+						  </tr>
+						  <tr>
+						    <td>Silver - $600+</td>
+						    <td>
+						    	<li>Logo: please send us your logo ASAP</li>
+						    	<li>Half page newsletter ad</li>
+						   		<li>E-Week tabling request</li>
+						  		<li>Submit poster for ESUC sponsorship wall</li>
+						    </td>
+						  </tr>
+						  <tr>
+						  <td>Bronze - $300+</td>
+						    <td>
+						    	<li>Logo: please send us your logo ASAP</li>
+						    	<li>Quarter page newsletter ad</li>
+						   		<li>E-Week tabling request</li>
+						    </td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+				<p class="caption" style="margin:10px 0">*If you or your organization is interested in reserving a portion of the newsletter, please contact Megha Manjunath for pricing at <a href="mailto:esuc.ucla.president@gmail.com">esuc.ucla.president@gmail.com</a></p>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+					">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+
+			</div>
+			<!--DESCRIPTION END-->
+			
+
+
+		</div>
+	</div>
+</div>
+
+<!--FOOTER BEGIN-->
+<div>
+	<% include partial/footer %>
+</div>
+<!--FOOTER END-->
+
+</body>
+</html>

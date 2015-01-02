@@ -1,0 +1,444 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a:hover {
+	text-decoration: none;
+	cursor:pointer;
+}
+
+#header-title, #header-title span, #menu, #menu li, #footer-title, #footer-title span, #copyright  {
+	position:relative;
+}
+
+/**HEADER BEGIN**/
+#header {
+	height:150px;
+	background-color:#02153a;
+}
+
+#header-title, #header-title span, #footer-title, #footer-title span {
+	color: white;
+	font-family: 'Goudy Bookletter 1911', serif;
+}
+
+#header-title {
+	top:20px;
+	min-width:240px;
+	font-size:30px;
+}
+
+#header-title span  {
+	left:10px;
+	font-size:13px;
+	display:block;
+}
+
+#menu {
+	margin: 0;
+	padding: 0;
+	top:-10px;
+	min-width: 420px;
+	float:right;
+}
+
+#menu li {
+	display:inline;
+	padding:0px 5px;
+	-webkit-transition: border-bottom 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: border-bottom 0.3s;
+}
+
+#menu li:hover {
+	border-bottom:3px solid #fff;
+}
+
+#menu li a {
+	color:white;
+}
+
+#menu .sub-menu {
+	position:absolute;
+	width:160px;
+	z-index: 999;
+	margin-top:5px;
+	display:none;
+}
+
+#calendar:hover .sub-menu, #sponsor:hover .sub-menu  {
+	display:block;
+}
+
+#menu .sub-menu ul {
+	background-color:#fff;
+	padding-top:10px;
+}
+
+#menu .sub-menu li{
+	font-size:14px;
+	display:block;
+	padding-left: 10px;
+	padding-bottom:10px;
+}
+
+#menu .sub-menu li:hover {
+	border:none;
+}
+
+#menu .sub-menu li a{ 
+	color:black;
+} 
+
+#menu .sub-menu li a:hover {
+  	color:#888;
+	cursor:pointer;
+}
+
+/*#calendar .sub-menu{
+	left:220px;
+}*/
+
+/**HEADER END**/
+
+/**FOOTER BEGIN**/
+#footer {
+	background-color:#02153a;
+}
+
+#footer .container>.row {
+	margin-bottom:5px;
+}
+
+#ucla-logo {
+	margin-top:20px;
+}
+
+#footer-title {
+	min-width:240px;
+	font-size:22px;
+	margin-top:-2px;
+}
+
+#footer-title span  {
+	font-size:13px;
+	display:block;
+}
+
+.footer-section {
+	margin:35px 0;
+}
+
+.footer-section h1{
+	color:#fff;
+	font-size:25px;
+	margin-bottom:20px;
+}
+
+.footer-sectionn ul {
+
+}
+
+.footer-section ul li {
+	line-height:25px;
+	color:#777;
+}
+
+.footer-section ul li a{
+	color:#5599cc;
+}
+
+.footer-section ul li a:hover{
+	color:#7599df;
+}
+
+.sub-list {
+	margin-top:5px;
+	margin-bottom:20px;
+	position: relative;
+	left:10px;
+}
+
+.sub-list  li {
+	color:#aaa !important;
+	line-height: 20px
+}
+
+.social-networks a {
+	position: relative;
+	top: -5px;
+}
+
+#copyright {
+	bottom:12px;
+	font-size:14px;
+	font-family:serif;
+	color:#888;
+	width:100%;
+	text-align: center;
+}
+
+#copyright a {
+	color:#888;
+	text-decoration: underline;
+}
+
+/**FOOTER END**/
+
+
+/**HOME BODY BEGIN**/
+
+/**CAROUSEL BEGIN**/
+
+#gallery-carousel {
+	top:-50px;
+}
+
+/**CAROUSEL END**/
+
+.main-section {
+	line-height: 25px;
+	margin-top:-20px;
+	margin-bottom:32px;
+}
+
+.main-section p span {
+	font-size:30px;
+}
+
+.section{
+	margin-bottom:20px;
+}
+
+#news {
+	float:right;
+}
+
+.section-title {
+	font-size:25px;
+	margin-bottom:10px;
+}
+
+.event {
+	height:180px;
+	border:1px solid black;
+	margin:10px 0;
+}
+
+.event .picture {
+	height:180px;
+
+}
+
+.event .content{
+	left:-15px;
+	height:178px;
+}
+
+.event .content h2 {
+	margin-top:5px;
+	font-size:19px;
+}
+
+.event .content div {
+	line-height: 15px;
+	margin:7px 0;
+}
+
+.event .content div p{
+	position: relative;
+	left:10px;
+}
+
+.event img {
+	height:178px;
+	width:100%;
+}
+
+.more-info {
+	position: relative;
+	margin-top:15px;
+}
+
+.horizontal-info {
+	z-index: 999;
+	height:30px;
+	background-color: rgba(240,240,240,0.9);
+	width:100%;
+	position: relative;
+	top:-32px;
+}
+
+.horizontal-info p {
+	line-height:30px;
+	letter-spacing:1px;
+}
+
+
+.horizontal-info p span {
+	font-size:16px;
+	margin:0 15px;
+}
+
+
+.news-content {
+	margin:10px 0 20px 0;
+	padding:0 0 0 15px;
+	border-left:5px solid #02153a;
+}
+
+.news-content h2 {
+	font-size:20px;
+	
+}
+
+.news-content p {
+	color:#333;
+}
+
+.news-content .posted-date {
+	font-color:#aaa;
+	font-size:12px;
+	margin-bottom:7px;
+}
+
+
+/**HOME BODY END**/
+
+/**OFFICERS BEGIN**/
+.profile h2, .profile h3, .short-desc {
+	text-align: center;
+}
+
+.profile {
+	margin-bottom:20px;
+	padding:10px;
+}
+
+.profile h2{
+	font-size:25px;
+	margin-bottom:8px;
+	letter-spacing: 2px;
+}
+
+.profile h3 {
+	letter-spacing: 1px;
+	font-size:18px;
+}
+
+.short-desc {
+	margin:0;
+	font-size:14px;
+	margin-top:-5px;
+}
+
+.profile .expand-container {
+	width:100%;
+	background-color:#02153a;
+	height:18px;
+	text-align: center;
+	box-shadow: 3px 5px 5px #888888;
+}
+
+.profile .expand {
+	font-size:12px;
+	color:#fff;
+	position: relative;
+	top:-6px;
+}
+
+
+.profile .expand:before {
+	content: "Collapse ▲";
+}
+
+.profile .expand.collapsed:before {
+	content: "Expand ▼";
+}
+
+
+.profile .glyphicon {
+	top:3px;
+}
+
+/**OFFICERS END**/
+
+/**OTHERS BEGIN**/
+.caption {
+	font-size:14px;
+	color:#666;
+}
+
+.sponsor-list li  {
+	display:inline;
+	margin-right:80px;
+	margin-bottom:40px;
+}
+
+.sponsor-list li img {
+	position: relative;
+}
+
+#yottabyte {
+	top:-20px;
+}
+
+.none {
+	font-size:15px;
+	color:#888
+}
+
+/**OTHERS END**/
+
+/*===================MEDIUM SCREEN BEGIN===================*/
+@media only screen and (max-width:992px) {
+
+	#menu {
+		top:30px;
+		float:none;
+	}
+
+	#news  {
+		float:none;
+	}
+
+	.event .content {
+		display:none;
+	}
+
+
+	#footer {
+		text-align: center;
+	}
+
+	.sponsor-list li  {
+		display:block;
+		text-align: center;
+		position: relative;
+		left:40px;
+	}
+
+	#yottabyte {
+		top:0;
+	}
+
+
+
+}
+/*===================MEDIUM SCREEN END===================*/
+
+/*===================LARGE SCREEN BEGIN===================*/
+	.more-info {
+		font-size:14px;
+	}
+/*===================LARGE SCREEN END===================*/
+
+/*===================DESKTOP SCREEN BEGIN===================*/
+@media only screen and (min-width:1200px) {
+	.carouselImg {
+		position: relative;
+		left:97px;
+	}
+
+	
+}
+/*===================DESKTOP SCREEN END===================*/
