@@ -94,6 +94,24 @@ a:hover {
 	cursor:pointer;
 }
 
+.navbar {
+	top:-26px;
+	background-color:transparent;
+	border:none;
+}
+
+.navbar-toggle:hover{
+	background-color:#ddd !important;
+}
+
+.icon-bar {
+	background-color:white !important;
+}
+
+#navbar {
+	background-color:white;
+}
+
 /*#calendar .sub-menu{
 	left:220px;
 }*/
@@ -255,6 +273,7 @@ a:hover {
 }
 
 .more-info {
+	font-size:14px;
 	position: relative;
 	margin-top:15px;
 }
@@ -389,6 +408,17 @@ a:hover {
 
 /**OTHERS END**/
 
+/*===================SMALL SCREEN BEGIN===================*/
+@media only screen and (max-width:768px) {
+	.iframe-form {
+		width:100% !important;
+	}
+
+}
+
+/*===================SMALL SCREEN BEGIN===================*/
+
+
 /*===================MEDIUM SCREEN BEGIN===================*/
 @media only screen and (max-width:992px) {
 
@@ -427,9 +457,7 @@ a:hover {
 /*===================MEDIUM SCREEN END===================*/
 
 /*===================LARGE SCREEN BEGIN===================*/
-	.more-info {
-		font-size:14px;
-	}
+
 /*===================LARGE SCREEN END===================*/
 
 /*===================DESKTOP SCREEN BEGIN===================*/

@@ -8,8 +8,8 @@
 				</h1></a>
 			</div>
 
-			<div class="col-md-5 col-md-offset-7">
-				<ul id="menu">
+			<div class="col-md-5 col-md-offset-7 hidden-xs">
+				<ul id="menu" >
 
 					<li><a href="/">Home</a></li>
 					<li><a href="/about">About</a></li>
@@ -34,9 +34,48 @@
 							</ul>
 						</div>
 					</li>
-
 				<ul>
 			</div>
+
+			<nav class="navbar navbar-default visible-xs-block" style="z-index:999">
+			    <div class="container">
+			        <div class="navbar-header">
+			       	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			              <span class="sr-only">Toggle navigation</span>
+			              <span class="icon-bar"></span>
+			              <span class="icon-bar"></span>
+			              <span class="icon-bar"></span>
+			            </button>
+			        </div>
+
+			        <div id="navbar" class="navbar-collapse collapse ">
+			            <ul class="nav navbar-nav navbar-right" >
+							<li><a href="/">Home</a></li>
+							<li><a href="/about">About</a></li>
+							<li><a href="/events">Events</a></li>
+							<li><a href="/officers">Officers</a></li>
+			              	<li class="dropdown">
+			                	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Calendar <span class="caret"></span></a>
+			                	<ul class="dropdown-menu" role="menu">
+									<li><a href="/engineering-calendar">Engineering Calendar</a></li>
+									<li><a href="/lounge-calendar">Lounge Calendar</a></li>
+			                	</ul>
+			                </li>
+
+			              	<li class="dropdown">
+			                	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sponsor <span class="caret"></span></a>
+			                	<ul class="dropdown-menu" role="menu">
+									<li><a href="/our-sponsors">Our Sponsors</a></li>
+									<li><a href="/co-host">Co-host An Event</a></li>
+									<li><a href="/donate">Donate</a></li>
+			                	</ul>
+			                </li>
+
+			            </ul>
+			        </div><!--/.nav-collapse -->
+		        </div><!--/.container -->
+			</nav>
+
 		</div>
 	</div>
 
