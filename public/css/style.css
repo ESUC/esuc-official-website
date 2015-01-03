@@ -49,7 +49,7 @@ a:hover {
     transition: border-bottom 0.3s;
 }
 
-#menu li:hover {
+#menu li:hover, #menu li:active {
 	border-bottom:3px solid #fff;
 }
 
@@ -65,7 +65,7 @@ a:hover {
 	display:none;
 }
 
-#calendar:hover .sub-menu, #sponsor:hover .sub-menu  {
+#calendar:hover .sub-menu,#calendar:active .sub-menu, #sponsor:hover .sub-menu,#sponsor:active .sub-menu  {
 	display:block;
 }
 
@@ -81,7 +81,7 @@ a:hover {
 	padding-bottom:10px;
 }
 
-#menu .sub-menu li:hover {
+#menu .sub-menu li:hover, #menu .sub-menu li:active {
 	border:none;
 }
 
@@ -89,7 +89,7 @@ a:hover {
 	color:black;
 } 
 
-#menu .sub-menu li a:hover {
+#menu .sub-menu li a:hover, #menu .sub-menu li a:active {
   	color:#888;
 	cursor:pointer;
 }
@@ -270,7 +270,7 @@ a:hover {
 
 .horizontal-info p {
 	line-height:30px;
-	letter-spacing:1px;
+	
 }
 
 
