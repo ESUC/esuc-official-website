@@ -65,13 +65,21 @@ a:hover {
 	display:none;
 }
 
+#calendar .sub-menu {
+	left:0px;
+}
+
+#sponsor .sub-menu {
+	left:0px;
+}
+
 #calendar:hover .sub-menu,#calendar:active .sub-menu, #sponsor:hover .sub-menu,#sponsor:active .sub-menu  {
 	display:block;
 }
 
 #menu .sub-menu ul {
 	background-color:#fff;
-	padding-top:10px;
+	padding-top:10px;	
 }
 
 #menu .sub-menu li{
