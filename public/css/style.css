@@ -22,10 +22,6 @@ a:hover {
 	font-family: 'Goudy Bookletter 1911', serif;
 }
 
-.header-header {
-	z-index:999 !important;
-}
-
 #header-title {
 	top:20px;
 	min-width:240px;
