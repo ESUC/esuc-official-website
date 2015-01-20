@@ -21,7 +21,7 @@ $( "#email-form" ).submit(function( event ) {
 
 
 	    	var email = {
-	    		to: 'vic317_yeh@hotmail.com',
+	    		to: 'esuc.ucla@gmail.com',
 	    		fromname: name,
 	    		from: email,
 	    		subject: esubject,
