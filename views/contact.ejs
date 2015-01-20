@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--WELCOME TO THE OFFICIAL WEBSITE OF THE ENGINEERING SOCIETY OF UCLA-->
+
+	<!--META BEGIN-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="keywords" content="esuc, engineering society of ucla, ucla, engineering, society, university of california, university of california, los angeles">
+	<!--META END-->
+	<title>Contact - Engineering Society of UCLA</title>
+	<!--LINKS BEGIN-->
+	<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link href='lib/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+	<link href='lib/bootstrap/css/bootstrap-theme.min.css' rel='stylesheet' type='text/css'>
+
+	<link href='css/reset.css' rel='stylesheet' type='text/css'>
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<!--LINKS END-->
+	<!--CDN BEGIN-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!--CDN END-->
+	<!--LOCAL BEGIN-->
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/contact.js"></script>
+	<!--<script type="text/javascript" src="js/.js"></script>-->
+	<!--LOCAL END-->
+
+</head>
+
+<body>
+<!--HEADER BEGIN-->
+<div>
+	<% include partial/header %>
+</div>
+<!--HEADER END-->
+
+
+<div class="container">
+
+	<div id="gallery-carousel" class="carousel slide"><!-- class of slide for animation -->
+	  <div class="carousel-inner">
+	    <div class="item active"><!-- class of active since it's the first item -->
+	      <img class="carouselImg" src="img/covers/10.jpg" alt="failed to load the image" />
+	    </div>
+	  </div><!-- /.carousel-inner -->
+	</div><!-- /.carousel -->
+
+
+	<div class="main-section">
+		<div class="row">
+			<!--DESCRIPTION BEGIN-->
+			<div class="section col-md-10 col-md-offset-1">
+				<div class="row" style="margin-left:10px">
+					<div class="section-title">Contact Us</div>
+					<p>
+						Fill out the form below to contact us directly, or send your email to <a href="mailto:esuc.ucla@gmail.com">esuc.ucla@gmail.com</a>.
+					</p>
+				</div>		
+			</div>
+			<!--DESCRIPTION END-->
+		</div>
+
+		<div class="row">
+			<!--FORM BEGIN-->
+			<div class="section col-md-10 col-md-offset-1">
+			<form style="padding:10px;border:1px solid #ddd;border-radius:5px" action="/email" method="post" accept-charset="utf-8" id="email-form">
+			  <div class="form-group">
+			    <label for="name">Name</label>
+			    <input type="email" class="form-control" id="name" placeholder="Your name">
+			  </div>
+			  <div class="form-group">
+			    <label for="email">Email</label>
+			    <input type="email" class="form-control" id="email" placeholder="Your email address">
+			  </div>
+
+			<div class="form-group">
+			    <label for="subject">Subject</label>
+			    <input type="text" class="form-control" id="emailSubject">
+			  </div>
+
+			  <div class="form-group">
+			    <label for="content">Content</label>
+			    <textarea name="about" class="form-control" style="resize: vertical;" rows="6" id="emailContent" placeholder="Enter your message"></textarea>
+			  </div>
+
+			  <button type="submit" class="btn btn-primary">Send</button> 
+			  </form> 
+			</div>
+			<!--FORM END-->			
+		</div>
+	</div>
+
+
+		<!--Modal Begin-->
+		<div id="confirm-modal" class="modal fade delete-box" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+            <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                           	Your email has been sent successfully! We'll get back to you shortly.
+                        </div>
+                        <div class="modal-footer">
+                           	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>     
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!--Modal End-->
+</div>
+
+
+<!--FOOTER BEGIN-->
+<div>
+	<% include partial/footer %>
+</div>
+<!--FOOTER END-->
+
+</body>
+</html>

@@ -5,6 +5,7 @@ var port     = process.env.PORT || 8080;
 var favicon = require('static-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var sendgrid  = require('sendgrid')('vic317yeh', 'e5U-ZAP-qFT-tZL');
 
 
 // use ===============================================================
@@ -19,7 +20,7 @@ app.set('view engine', 'ejs');
 
 
 // routes =============================================================
-require('./routes/index')(app);
+require('./routes/index')(app,sendgrid);
 
 
 // launch ======================================================================

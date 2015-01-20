@@ -14,7 +14,7 @@ a:hover {
 /**HEADER BEGIN**/
 #header {
 	height:150px;
-	background-color:#02153a;
+	background-color:#225A9D;
 }
 
 #header-title, #header-title span, #footer-title, #footer-title span {
@@ -36,9 +36,10 @@ a:hover {
 
 #menu {
 	margin: 0;
+	margin-left:-5px;
 	padding: 0;
 	top:-10px;
-	min-width: 420px;
+	min-width: 440px;
 	float:right;
 }
 
@@ -128,7 +129,8 @@ a:hover {
 
 /**FOOTER BEGIN**/
 #footer {
-	background-color:#02153a;
+	/**02153a**/
+	background-color:#225A9D;
 }
 
 #footer .container>.row {
@@ -166,7 +168,7 @@ a:hover {
 
 .footer-section ul li {
 	line-height:25px;
-	color:#777;
+	color:#aaa;
 }
 
 .footer-section ul li a{
@@ -185,7 +187,7 @@ a:hover {
 }
 
 .sub-list  li {
-	color:#aaa !important;
+	color:#ccc !important;
 	line-height: 20px
 }
 
@@ -198,13 +200,13 @@ a:hover {
 	bottom:12px;
 	font-size:14px;
 	font-family:serif;
-	color:#888;
+	color:#aaa;
 	width:100%;
 	text-align: center;
 }
 
 #copyright a {
-	color:#888;
+	color:#aaa;
 	text-decoration: underline;
 }
 
@@ -310,7 +312,7 @@ a:hover {
 .news-content {
 	margin:10px 0 20px 0;
 	padding:0 0 0 15px;
-	border-left:5px solid #02153a;
+	border-left:5px solid #225A9D;
 }
 
 .news-content h2 {
@@ -360,7 +362,7 @@ a:hover {
 
 .profile .expand-container {
 	width:100%;
-	background-color:#02153a;
+	background-color:#225A9D;
 	height:18px;
 	text-align: center;
 	box-shadow: 3px 5px 5px #888888;
@@ -414,6 +416,10 @@ a:hover {
 	color:#888
 }
 
+.event-desc {
+	color:#454545;
+}
+
 /**OTHERS END**/
 
 /*===================SMALL SCREEN BEGIN===================*/
@@ -459,7 +465,10 @@ a:hover {
 		top:0;
 	}
 
-
+	.m-e-section .row {
+		margin-left:0;
+		margin-right:0;
+	}
 
 }
 /*===================MEDIUM SCREEN END===================*/

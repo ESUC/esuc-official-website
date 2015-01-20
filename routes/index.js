@@ -1,4 +1,4 @@
-module.exports = function(app) {
+module.exports = function(app, sendgrid) {
 
 	app.get('/',function(req,res) {
 		res.render('index');
@@ -18,6 +18,10 @@ module.exports = function(app) {
 
 	app.get('/reservation',function(req,res) {
 		res.render('reservation');
+	});
+
+	app.get('/major-events',function(req,res) {
+		res.render('major-events');
 	});
 
 	app.get('/events',function(req,res) {
@@ -40,4 +44,22 @@ module.exports = function(app) {
 		res.render('donate');
 	});
 
+
+	app.get('/contact',function(req,res) {
+		res.render('contact');
+	});
+
+	app.post('/email',  function(req, res) {
+        if (typeof req.body.email === "undefined") {
+            res.redirect("/");
+            return;
+        }
+
+        var email = new sendgrid.Email(req.body.email);
+        sendgrid.send(email, function(err, json) {
+          if (err) { return console.error(err); }
+          console.log(json);
+          res.send('success');
+        });
+    });
 }
