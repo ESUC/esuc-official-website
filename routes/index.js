@@ -49,6 +49,10 @@ module.exports = function(app, sendgrid) {
 		res.render('contact');
 	});
 
+	app.get('/eweek',function(req,res) {
+		res.render('eweek15/index');
+	});
+
 	app.post('/email',  function(req, res) {
         if (typeof req.body.email === "undefined") {
             res.redirect("/");
