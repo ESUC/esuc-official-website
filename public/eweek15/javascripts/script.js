@@ -54,7 +54,7 @@ function scrollSpy() {
 
 function eventCollapse() {
     console.log("eventCollapse loaded");
-    $('.collapse').collapse();
+    $('.panel-collapse').collapse();
 }
 
 function changeEvents() {

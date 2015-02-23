@@ -17,6 +17,9 @@ app.use(express.static(__dirname+'/public'));
 
 
 
+
+
+
 //set
 app.set('view engine', 'ejs');
 

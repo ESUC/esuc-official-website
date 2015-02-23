@@ -1,6 +1,11 @@
 module.exports = function(app, sendgrid) {
 
+
+
+
 	app.get('/',function(req,res) {
+
+
 		res.render('index');
 	});
 
@@ -53,17 +58,19 @@ module.exports = function(app, sendgrid) {
 		res.render('eweek15/index');
 	});
 
-	app.post('/email',  function(req, res) {
-        if (typeof req.body.email === "undefined") {
-            res.redirect("/");
-            return;
-        }
 
-        var email = new sendgrid.Email(req.body.email);
-        sendgrid.send(email, function(err, json) {
-          if (err) { return console.error(err); }
-          console.log(json);
-          res.send('success');
-        });
-    });
+
+	app.post('/email',  function(req, res) {
+		if (typeof req.body.email === "undefined") {
+			res.redirect("/");
+			return;
+		}
+
+		var email = new sendgrid.Email(req.body.email);
+		sendgrid.send(email, function(err, json) {
+		  if (err) { return console.error(err); }
+		  console.log(json);
+		  res.send('success');
+		});
+	});
 }
