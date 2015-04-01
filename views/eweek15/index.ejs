@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="UCLA Engineers Week 2015">
+        <meta name="author" content="Jayendra Jog and Anthony Lai">
         
         <title>UCLA Engineers Week</title>
         
@@ -13,15 +13,27 @@
         <link href="./eweek15/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
         
         <!-- Bootstrap Fonts -->
-        <link href="./eweek15/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!--<link href="stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+        <link href="./eweek15/stylesheets/font-awesome-less.css" rel="stylesheet" type="text/css">
         <link href="./eweek15/stylesheets/bootstrap-social.css" rel="stylesheet" type="text/css">
         
         <!-- Custom CSS -->
         <!--<link href="stylesheets/reset.css" rel="stylesheet" type="text/css">-->
         <link href="./eweek15/stylesheets/custom.css" rel="stylesheet" type="text/css">
+        <!--[if gte IE 9]>
+            <style type="text/css">
+                .gradient {
+                    filter: none;
+                }
+            </style>
+        <![endif]-->
         
         <!-- Custom Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+        
         <!--<link rel="icon" href="../../favicon.ico">-->
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,11 +49,27 @@
 
             ga('create', 'UA-60000629-1', 'auto');
             ga('send', 'pageview');
-
         </script>
+        <!-- Start of StatCounter Code for Webs (previously known as Freewebs) -->
+        <script type="text/javascript">
+            var sc_project=10369535; 
+            var sc_invisible=1; 
+            var sc_security="cefa9402"; 
+            var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+            document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+        </script>
+        <noscript>
+            <div class="statcounter">
+                <a title="websitestatistics" href="http://statcounter.com/" target="_blank">
+                    <img class="statcounter" src="http://c.statcounter.com/10369535/0/cefa9402/1/" alt="website statistics">
+                </a>
+            </div>
+        </noscript>
+        <!-- End of StatCounter Code for Webs (previously known as Freewebs) -->
     </head>
 
     <body data-spy="scroll" data-target=".navbar-top">
+        
         <header>
             <nav class="navbar navbar-inverse navbar-fixed-top navbar-top">
                 <div class="container">
@@ -56,28 +84,31 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right nav-ul">
-                            <li class="active"><a href="#Home">E-Week</a></li>
+                            <!--<li class="active"><a href="#Home">E-Week</a></li>-->
                             <li><a href="#About">About</a></li>
                             <li><a href="#Events">Events</a></li>
                             <!--<li><a href="#Scoreboard">Scoreboard</a></li>-->
+                            <li><a href="#Social">Social</a></li>
                             <li><a href="#Sponsors">Sponsors</a></li>
-                            <!--<li><a href="#Contact">Contact</a></li>-->
-                            <li><a class="hidden-xs top-nav-button" href="mailto:esuc.ucla.president@gmail.com" style="background-color:#222">Contact</a></li>
-                            <li><a class="hidden-xs top-nav-button" href="https://docs.google.com/a/g.ucla.edu/forms/d/1bg4kuTtkMrle1YtHPxnDXTNLp-kW64qIqn3HhZPD4Lk/viewform?edit_requested=true" style="background-color:#222"><span class="glyphicon glyphicon-tag"></span> Sign Up</a></li>
+                            <li><a href="#Contact">Contact</a></li>
+                            <!--<li><a class="hidden-xs top-nav-button" href="mailto:esuc.ucla.corporate@gmail.com">Contact</a></li>-->
+                            <!--<li><a class="hidden-xs top-nav-button" href="http://goo.gl/forms/t9V9VfQ8TL"><span class="glyphicon glyphicon-tag"></span> Sign Up</a></li>
                             <!-- Mobile Specific -->
-                            <li><a class="visible-xs" href="mailto:esuc.ucla.president@gmail.com" >Contact</a></li>
-                            <li><a class="visible-xs" href="https://docs.google.com/a/g.ucla.edu/forms/d/1bg4kuTtkMrle1YtHPxnDXTNLp-kW64qIqn3HhZPD4Lk/viewform?edit_requested=true" ><span class="glyphicon glyphicon-tag"></span> Sign Up</a></li>
-                            <!-- Mobile Specific -->
+                            <!--<li><a class="visible-xs" href="mailto:esuc.corporate.ucla@gmail.com">Contact</a></li>
+                            <li><a class="visible-xs" href="http://goo.gl/forms/t9V9VfQ8TL"><span class="glyphicon glyphicon-tag"></span> Sign Up</a></li>-->
+                            <!-- End Mobile Specific -->
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
             </nav>
         </header><!--End of header-->
-        
+        <div class="container-fluid page">
         <main>
             <div class="container-fluid" id="Home">
-                <h1 id = "top" align="center">UCLA 46th Annual Engineers Week</h1>
-                <h3 align="center">April 6th-10th</h3>
+                <h1>UCLA 46<sup>th</sup> Annual<br>Engineers Week</h1>
+                <h3><i>April 6<sup>th</sup> - 10<sup>th</sup>, 2015</i></h3>
+                <div class="signup"><a class="btn" href="http://goo.gl/forms/t9V9VfQ8TL" target="_blank"><span class="glyphicon glyphicon-tag"></span> Sign Up</a></div>
+                <!-- Carousel or picture here/logo -->
                 <!-- Carousel or picture here/logo -->
                 <div id="Carousel" class = "carousel slide" data-ride ="carousel" data-interval="3000">
                     <ol class = "carousel-indicators">
@@ -114,26 +145,28 @@
                     <a class="carousel-control right" href="#Carousel" data-slide = "next">
                         <span class = "icon-next"></span>
                     </a>
-	
-	
                 </div>
             </div><!-- End of Home -->
             
             <div class="container-fluid" id="About">
                 <div id="part2">
-                    <h2 align="center">Do you have what it takes?</h2>
+                    <h2>Do you have what it takes?</h2>
                     <div class = "row">
-                       
-                        <div class = "col-md-6 col-md-offset-3">
-                            <h3 align="center"> What is E-Week? </h3>
+                        <div class = "col-md-6">
+                            <img src="./eweek15/pictures/esuc3.jpg" alt="talent show" style="margin-top:5%; margin-left:10%; margin-bottom:5%; height:55%; width:80%" />
+                        </div>
+                        <div class = "col-md-6">
+                            <h3> What is E-Week? </h3>
                             <p> Engineers Week is an annual event hosted by ESUC that celebrates UCLA Engineering and brings together the engineering administration, student body, and industry partners. We host a wide variety of events ranging from engineering competitions to sports tournaments and community outreach events as a way of building and fostering mentorship with the local engineering community.
                             </p>
                         </div>
                     </div>
                     <div class="row">
-                         
-                        <div class="col-md-6 col-md-offset-3">
-                            <h3 align="center">A Race to the Top</h3>
+                        <div class="col-md-6">
+                        <img src="./eweek15/pictures/trophy.jpg" alt="trophy" style="margin-top:5%; margin-left:19%; margin-bottom:5%; height:60%; width:60%" />
+                        </div>
+                        <div class="col-md-6">
+                            <h3>A competition for the ages</h3>
                             <p >
                     For the first time in ESUC history, the 46th annual UCLA Engineers Week, will be redesigned to be a week-long competition where teams of 4-6 students may compete and earn points through attending (and winning!) our events, as well as promoting other events using special E-Week hashtags on Facebook, Twitter and Instagram! We hope that this Engineers Week competition will be a refreshing change of pace, as well as an exciting new venture for our engineering students to work together and compete against other engineering students.
                             </p>
@@ -144,6 +177,7 @@
             </div><!-- End of About -->
             
             <div class="container-fluid" id="Events">
+                <hr>
                 <h1>Events</h1>
                 
                 <nav class="hidden-xs event-top-nav">
@@ -174,15 +208,15 @@
                             <div class="event"><!--  Start First Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> TBA
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 10:00 AM
                                     </div>
                                     <a data-toggle="collapse" href="#MonFirst" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
+                                    <h4>
                                         AIAA Model Airplane Contest
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="MonFirst" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -197,38 +231,38 @@
                             <div class="event"><!-- Start Second Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> TBA
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 11:00 AM
                                     </div>
                                     <a data-toggle="collapse" href="#MonSecond" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
-                                        ESUC Egg Drop
+                                    <h4>
+                                        ACM Rubik's Cube Competition
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="MonSecond" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p class="event-description">
-                    E<sub>k</sub> = &frac12 mV<sup>2</sup>. Do you know your physics well enough? Can you prevent your egg from breaking when we drop it 3 levels above the ground? Come join us for the ESUC Egg Drop Contest! We provide the eggs and materials, you protect the egg!
+                    Dig that Rubik's Cube out of your dusty drawer and start sharpening your skills! Don't know how to solve it? Just come join us and we will teach you. At the end, there will be a Rubik's Cube competition for the best of the best!
                                     </p>
                                 </div>
                                 <div class="event-location">
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Court of Sciences
+                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> TBA
                                 </div>
                             </div><!-- End Second Event -->
                             <div class="event"><!-- Start Third Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> TBA
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 1:00 PM
                                     </div>
                                     <a data-toggle="collapse" href="#MonThird" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
+                                    <h4>
                                         ASCE Tower Contest
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="MonThird" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -237,125 +271,102 @@
                                     </p>
                                 </div>
                                 <div class="event-location">
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> TBA
-                                </div>
-                            </div><!-- End Third Event -->
-                            <!-- Fourth Event Deleted -->
-                            <div class="event"><!-- Fifth Event -->
-                                <div class="event-heading">
-                                    <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> All Day
-                                    </div>
-                                    <a data-toggle="collapse" href="#MonFifth" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
-                                        Technical Book Sale & Food Sale
-                                        <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
-                                        <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
-
-                                    </h3>
-                                    </a>
-                                </div>
-                                <div id="MonFifth" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <p class="event-description">
-                    Always wanted to own one of those priceless, invaluable books from the UCLA libraries? Well now you have the chance! There will be food sale also. Come check out what we have to offer!
-                                    </p>
-                                </div>
-                                <div class="event-location">
                                     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Court of Sciences
                                 </div>
-                            </div><!-- End Fifth Event -->
-                        </div>
-                    </div><!-- End Monday -->
-                    
-                    <div class="event"><!-- Start Fourth Event -->
+                            </div><!-- End Third Event -->
+                            <div class="event"><!-- Start Fourth Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> TBA
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 6:45 PM - 9:30 PM
                                     </div>
-                                    <a data-toggle="collapse" href="#WedFourth" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
+                                    <a data-toggle="collapse" href="#MonFourth" aria-expanded="true" aria-controls="collapseOne">
+                                    <h4>
                                         AIChE "The Core" Competition
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
-                                <div id="WedFourth" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div id="MonFourth" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p class="event-description">
-                    Join us in watching The Core and compete against other teams in trying to spot the most number of scientific inaccuracies in the movie!
+                    Come join us during E Week and watch as the Earth is saved from catastrophe by actor Aaron Echkart and actress Hilary Swank in the movie The Core. Known for it's multitude of scientific flaws,  The Core ranges from action to adventure to comedy. Point out these flaws and you'll have a chance to win a prize.
                                     </p>
                                 </div>
                                 <div class="event-location">
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> TBA
+                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Boelter Penthouse
                                 </div>
                             </div><!-- End Fourth Event -->
+                            <!-- Fifth Event Deleted -->
+                        </div>
+                    </div><!-- End Monday -->
+
                     <div id="Tuesday">
                         <h2>Tuesday: Play.</h2>
                         <div class="event-list">
                             <div class="event"><!--  Start First Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> TBA
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 11:00 AM
                                     </div>
                                     <a data-toggle="collapse" href="#TueFirst" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
-                                        IEEE basketball game
+                                    <h4>
+                                        ESUC Egg Drop
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="TueFirst" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p class="event-description">
-                    Bruins! This is the chance for you to meet other engineers!
+                    E<sub>k</sub> = &frac12 mV<sup>2</sup>. Do you know your physics well enough? Can you prevent your egg from breaking when we drop it 3 levels above the ground? Come join us for the ESUC Egg Drop Contest! We provide the eggs and materials, you protect the egg!
                                     </p>
                                 </div>
                                 <div class="event-location">
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> TBA
+                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Court of Sciences
                                 </div>
                             </div><!-- End First Event -->
-         <div class="event"><!-- Start Second Event -->
+                            <div class="event"><!-- Start Second Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> TBA
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 6:00 PM
                                     </div>
-                                    <a data-toggle="collapse" href="#WedSecond" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
-                                        ACM Rubik's Cube Competition
+                                    <a data-toggle="collapse" href="#TueSecond" aria-expanded="true" aria-controls="collapseOne">
+                                    <h4>
+                                        ESUC Basketball Game
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
-                                <div id="WedSecond" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div id="TueSecond" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p class="event-description">
-                    Dig that Rubik's Cube out of your dusty drawer and start sharpening your skills! Don't know how to solve it? Just come join us and we will teach you. At the end, there will be a Rubik's Cube competition for the best of the best!
+                    Are you the next Russell Westbrook or Kevin Love? Come join us on the Collins Court and show us your basketball talents! Best of all? Earn points for your team!
                                     </p>
                                 </div>
                                 <div class="event-location">
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> TBA
+                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> SAC Gym
                                 </div>
-                            </div><!-- End Second Event -->                 
+                            </div><!-- End Second Event -->
                             <div class="event"><!-- Start Third Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
                                         <span class="glyphicon glyphicon-time" aria-hidden="true"></span> All Day
                                     </div>
                                     <a data-toggle="collapse" href="#TueThird" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
-                                        Technical Book Sale & Food Sale
+                                    <h4>
+                                        Technical Book Sale
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="TueThird" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p class="event-description">
-                    Always wanted to own one of those priceless, invaluable books from the UCLA libraries? Well now you have the chance! There will be food sale also. Come check out what we have to offer!
+                    Always wanted to own one of those priceless, invaluable books from the UCLA libraries? Well now you have the chance! Come check out what we have to offer!
                                     </p>
                                 </div>
                                 <div class="event-location">
@@ -374,12 +385,12 @@
                                         <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 9:00 AM - 12:00 PM
                                     </div>
                                     <a data-toggle="collapse" href="#WedFirst" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
+                                    <h4>
                                         Kid's Day
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="WedFirst" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -391,19 +402,41 @@
                                     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Ackerman Grandball Room
                                 </div>
                             </div><!-- End First Event -->
-                           
-                            <div class="event"><!-- Start Third Event -->
+                            <div class="event"><!-- Start Second Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> TBA
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 12:00 PM - 2:00 PM
                                     </div>
-                                    <a data-toggle="collapse" href="#WedThird" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
-                                        Engineers For Equality: The Gameshow
+                                    <a data-toggle="collapse" href="#WedSecond" aria-expanded="true" aria-controls="collapseOne">
+                                    <h4>
+                                        AIChE Engineering Trivia Game
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
+                                    </a>
+                                </div>
+                                <div id="WedSecond" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <p class="event-description">
+                    Come join us for a game of Trivia Crack during E-week! Our chemical engineering version includes fun categories like food, fuel, and famous people, as well as topics in engineering and science. Answer questions correctly and you can win Diddy Riese cookies, Koala Tapioca gift certificates, and gift cards. Show your friends who should really be on top of the leaderboard!
+                                    </p>
+                                </div>
+                                <div class="event-location">
+                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Court of Sciences
+                                </div>
+                            </div><!-- End Second Event -->
+                            <div class="event"><!-- Start Third Event -->
+                                <div class="event-heading">
+                                    <div class="event-time">
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 6:00 PM - 8:00 PM
+                                    </div>
+                                    <a data-toggle="collapse" href="#WedThird" aria-expanded="true" aria-controls="collapseOne">
+                                    <h4>
+                                        SWE Engineering for Equality: The Gameshow
+                                        <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
+                                        <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
+
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="WedThird" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -412,27 +445,27 @@
                                     </p>
                                 </div>
                                 <div class="event-location">
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> TBA
+                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Boelter Penthouse
                                 </div>
                             </div><!-- End Third Event -->
-                            
+                            <!-- Fourth Event Deleted -->
                             <div class="event"><!-- Start Fifth Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
                                         <span class="glyphicon glyphicon-time" aria-hidden="true"></span> All Day
                                     </div>
                                     <a data-toggle="collapse" href="#WedFifth" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
-                                        Technical Book Sale & Food Sale
+                                    <h4>
+                                        Technical Book Sale
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="WedFifth" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p class="event-description">
-                    Always wanted to own one of those priceless, invaluable books from the UCLA libraries? Well now you have the chance! There will be food sale also. Come check out what we have to offer!
+                    Always wanted to own one of those priceless, invaluable books from the UCLA libraries? Well now you have the chance! Come check out what we have to offer!
                                     </p>
                                 </div>
                                 <div class="event-location">
@@ -445,50 +478,28 @@
                     <div id="Thursday">
                         <h2>Thursday: Shine.</h2>
                         <div class="event-list">
-                            <div class="event"><!--  Start First Event -->
-                                <div class="event-heading">
-                                    <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> TBA
-                                    </div>
-                                    <a data-toggle="collapse" href="#ThuFirst" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
-                                        AIChE Engineering Trivia
-                                        <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
-                                        <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
-
-                                    </h3>
-                                    </a>
-                                </div>
-                                <div id="ThuFirst" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <p class="event-description">
-                    The week is wraping up and your team is behind! Join this fun trivia tournament to earn points and help your team lift the trophy!
-                                    </p>
-                                </div>
-                                <div class="event-location">
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> TBA
-                                </div>
-                            </div><!-- End First Event -->
+                            <!-- First Event Deleted -->
                             <div class="event"><!-- Start Second Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 6:00 PM - 9:00 PM
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 6:00 PM - 8:30 PM
                                     </div>
                                     <a data-toggle="collapse" href="#ThuSecond" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
+                                    <h4>
                                         Talent Show
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="ThuSecond" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p class="event-description">
-                    Do you have a secret talent? A party trick? An undeniable yearning to perform? Do you ever feel like the epic magnitude of your intellect overshadows your incomparable knock-knock jokes? Then sign up for the Engineers Week Talent Show! The talent show will take place on Thursday, April 9, and everyone is encouraged to sign up, be it as a solo performer, a duo or a group. Teams participating in the E-Week competition will receive points for performing, and the winner of the talent show will get an uncertain prize of certain awesomeness (last year’s prizes included gift cards and a Microsoft Surface). <a href="https://docs.google.com/a/g.ucla.edu/forms/d/1zjfAo6KjT2X768loSHn-8uJ3yZx2oOV3xagkSptSpCA/viewform">Sign up now!</a>
+                    Are you a singer? A rapper? A dancer? Or perhaps you have other special talents! Come join us for the Talent Show. Show off your talents, or check out what talents your fellow Bruins have got.
                                     </p>
                                 </div>
                                 <div class="event-location">
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Kerchoff Grand Salon
+                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Kerckhoff Grand Salon
                                 </div>
                             </div><!-- End Second Event -->
                             <div class="event"><!-- Start Third Event -->
@@ -497,17 +508,17 @@
                                         <span class="glyphicon glyphicon-time" aria-hidden="true"></span> All Day
                                     </div>
                                     <a data-toggle="collapse" href="#ThuThird" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
-                                        Technical Book Sale & Food Sale
+                                    <h4>
+                                        Technical Book Sale
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="ThuThird" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p class="event-description">
-                    Always wanted to own one of those priceless, invaluable books from the UCLA libraries? Well now you have the chance! There will be food sale also. Come check out what we have to offer!
+                    Always wanted to own one of those priceless, invaluable books from the UCLA libraries? Well now you have the chance! Come check out what we have to offer!
                                     </p>
                                 </div>
                                 <div class="event-location">
@@ -523,97 +534,226 @@
                             <div class="event"><!--  Start First Event -->
                                 <div class="event-heading">
                                     <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> TBA
+                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> 11:00 AM - 2:00 PM
                                     </div>
                                     <a data-toggle="collapse" href="#FriFirst" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
+                                    <h4>
                                         Engineering Food Fair
                                         <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
                                         <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
 
-                                    </h3>
+                                    </h4>
                                     </a>
                                 </div>
                                 <div id="FriFirst" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <p class="event-description">
-                    Who doesn't like food? Come check out what we have to offer at the Engineering Food Fair!
+                    Who doesn't like food? We wrap up the week with some BBQ and baked goods. Come check out what we have to offer at the Engineering Food Fair!
                                     </p>
                                 </div>
                                 <div class="event-location">
                                     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Court of Sciences
                                 </div>
                             </div><!-- End First Event -->
-                           
-                            <div class="event"><!-- Start Third Event -->
-                                <div class="event-heading">
-                                    <div class="event-time">
-                                        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> All Day
-                                    </div>
-                                    <a data-toggle="collapse" href="#FriThird" aria-expanded="true" aria-controls="collapseOne">
-                                    <h3>
-                                        Technical Book Sale & Food Sale
-                                        <span class="glyphicon glyphicon-chevron-down arrow-active" aria-hidden="true"></span>
-                                        <span class="glyphicon glyphicon-chevron-up arrow" aria-hidden="true"></span>
-
-                                    </h3>
-                                    </a>
-                                </div>
-                                <div id="FriThird" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <p class="event-description">
-                    Always wanted to own one of those priceless, invaluable books from the UCLA libraries? Well now you have the chance! There will be food sale also. Come check out what we have to offer!
-                                    </p>
-                                </div>
-                                <div class="event-location">
-                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Court of Sciences
-                                </div>
-                            </div><!-- End Third Event -->
                         </div>
                     </div>
                 </div>
             </div><!-- End of Events -->
             
-<!--            <div class="container-fluid" id="Scoreboard">
+            <!--<div class="container-fluid" id="Scoreboard">
+                <hr>
                 <h1>Scoreboard</h1>
+                <div>
+                    <table class="table table-hover" id="scoretable">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Team Name</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Current Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Team 1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Team 2</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Team 3</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Team 4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Team 5</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Team 6</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Team 7</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Team 8</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Team 9</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Team 10</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div><!-- End of Scoreboard -->
             
+            <div class="container-fluid" id="Social">
+                <hr>
+                <h1>#EWeek2015</h1>
+                <div class="tagboard">
+                    <div class="tagboard-embed" tgb-slug="EWeek2015/215852" tgb-post-count="25" tgb-mobile-count="10"></div>
+                </div>
+            </div><!-- End of Social -->
+        
             <div class="container-fluid" id="Sponsors">
+                <hr>
                 <h1>Sponsors</h1>
                 <!--<div class="sponsor-logo">-->
+                    <!--<div class="row sponsor-logo">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4"><img src="pictures/connexity.png"/></div>
+                        <div class="col-sm-4"><img src="pictures/HelloTech-g.png"/></div>
+                        <div class="col-sm-2"></div>
+                    </div>-->
                     <div class="row sponsor-logo">
-                        <div class="col-sm-4"><img src="./eweek15/pictures/sponsor-placeholder.jpg"/></div>
-                        <div class="col-sm-4"><img src="./eweek15/pictures/sponsor-placeholder.jpg"/></div>
-                        <div class="col-sm-4"><img src="./eweek15/pictures/sponsor-placeholder.jpg"/></div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4"><img src="./eweek15/pictures/connexity.png"/></div>
+                        <div class="col-sm-4"></div>
                     </div>
                     <div class="row sponsor-logo">
-                        <div class="col-sm-4"><img src="./eweek15/pictures/sponsor-placeholder.jpg"/></div>
-                        <div class="col-sm-4"><img src="./eweek15/pictures/sponsor-placeholder.jpg"/></div>
-                        <div class="col-sm-4"><img src="./eweek15/pictures/sponsor-placeholder.jpg"/></div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6"><img src="./eweek15/pictures/HelloTech-g.png"/></div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                    <!--<div class="row sponsor-logo">
+                        <div class="col-sm-4"><img src="pictures/connexity.png"/></div>
+                        <div class="col-sm-4"><img src="pictures/HelloTech-g.png"/></div>
+                        <div class="col-sm-4"><img src="pictures/sponsor-placeholder.jpg"/></div>
                     </div>
                 <!--</div>-->
             </div><!-- End of Sponsors -->
             
-<!--            <div class="container-fluid" id="Contact">
-                <h1>Contact</h1>
+            <div class="container-fluid" id="Contact">
+                <hr>
+                <h1>Keep in Touch</h1>
+                <div class="signup"><a class="btn" href="mailto:esuc.ucla.corporate@gmail.com"><span class="fa fa-envelope"></span>  Email Us</a></div>
+                <ul class="social-media">
+                    <li><a href="https://twitter.com/esucla" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://instagram.com/esucla/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#" title="Google+"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="https://www.linkedin.com/groups/Engineering-Society-UCLA-7449973" title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <!--<li><a href="#"><i class="fa fa-vine"></i></a></li>-->
+                    <!--<li><a href="mailto:esuc.ucla.corporate@gmail.com" title="Email"><i class="fa fa-inbox"></i></a></li>-->
+                </ul>
             </div><!-- End of Contact -->
             
-        
+            
         </main>
         
         
         <footer>
-            <p class="hidden-xs">&copy; 2015 <a href="http://esuc.ucla.edu/">Engineering Society of UCLA</a>. Design by <a href="http://www.linkedin.com/in/theanthonylai">Anthony Lai</a> and Jayendra Jog</p>
+            <p class="hidden-xs">&copy; 2015 <a href="http://esuc.ucla.edu/">Engineering Society of UCLA</a>. Design by <a href="http://linkedin.com/in/JayendraJog" target="_blank">Jayendra Jog</a> and <a href="http://theAnthonyLai.com" target="_blank">Anthony Lai</a></p>
             <!-- For Mobile Only -->
-            <p class="visible-xs">&copy; 2015 <a href="http://esuc.ucla.edu/">Engineering Society of UCLA</a>.<br>Design by <a href="http://www.linkedin.com/in/theanthonylai">Anthony Lai</a> and Jayendra Jog</p>
+            <p class="visible-xs">&copy; 2015 <a href="http://esuc.ucla.edu/">Engineering Society of UCLA</a>.<br>Design by <a href="http://linkedin.com/in/JayendraJog" target="_blank">Jayendra Jog</a> and <a href="http://theAnthonyLai.com" target="_blank">Anthony Lai</a></p>
             <!-- End For Mobile Only -->
         </footer>
         
         
-        
+    </div>   
+    <div class="container-fluid page-background"></div>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="./eweek15/javascripts/bootstrap.min.js"></script>
       <!--  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>-->
-        <script src="./eweek15/javascripts/script.js"></script>
+        <script src="./eweek15/javascripts/jquery.backstretch.min.js"></script>
+        <script src="./eweek15/javascripts/custom.js"></script>
+        <script src="https://static.tagboard.com/public/js/embed.js"></script>
         
     </body>
 </html>

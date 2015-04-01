@@ -1,80 +1,70 @@
-/* just for identifier during development*/
-#Home,
-#About,
-#Events
- {
-   padding-bottom:2%;
-}
-#About {
-    background-color: #ECF0F1;
-    height: 100%;
-}
-#Home,
-#Scoreboard,
-#Contact {
-    background-color: #3498DB;
-    color: white;
-}
-
-/*  End development-used CSS    */
-
 body {
     padding-top: 50px;
 }
 
-/*
-main {
-    position: relative;
+h1, h2, h3, h4 {
+    font-family: 'Lato', sans-serif;
 }
-*/
 
+h1 {
+    /*font-size: 4.7vw;*/
+    font-size: 2.5em;   /* no use here...controlled by custom.js */
+    text-align: center;
+}
+
+h2 {
+    /*font-size: 3.3vw;*/
+    font-size: 1.8em;   /* no use here...controlled by custom.js */
+}
+
+h3 {
+    font-size: 1.5em;   /* no use here...controlled by custom.js */
+}
+
+h4 {
+    /*font-size: 2.7vw;*/
+    font-size: 1.2em;   /* no use here...controlled by custom.js */
+}
+
+p, a, li, div, span {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+    margin: 0 auto;
+    max-width: 930px;
+    z-index: 1;/*safari issues*/
+    -webkit-transform: translate3d(0,0,0);/*safari issues*/
+}
+
+.page-background {
+    content: "";
+    /*background: url(../pictures/cream_dust.png) repeat 0 0;*/
+    background: url(../pictures/geometry.png) repeat;
+    background-size: 50 50; /* safari does not like the short-handed versioin*/
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    -webkit-transform: translate3d(0,0,0);/*safari issues*/
+    max-width: 930px;
+}
 
 main > div {
     padding-top: 50px;
 }
-.carousel-control.left, .carousel-control.right {
-    background-image: none
+
+hr {
+    margin: 10px 0 20px 0;  /* margin and width further modified with js according to .page width */
 }
 
-/*
-#Tuesday,
-#Wednesday,
-#Thursday,
-#Friday {
-    height: 700px;
-}
-
-#Tuesday,
-#Thursday {
-    background-color: #333333;
-    color: white;
-}
-
-#Tuesday .event-heading h3,
-#Tuesday .event-heading a:hover,
-#Thursday .event-heading h3,
-#Thursday .event-heading a:hover {
-    color: yellow;
-}
-*/
-
-h1 {
-    text-align: center;
-    font-size: 4vw;
-}
-
-h2 {
-    font-size: 3.3vw;
-}
-
-h3{
-    font-size: 2.7vw;
-}
-
-#Monday,
-#Wednesday,
-#Friday {
-    /*background-color: #FFD633;*/
+#Home,
+#About,
+#Events {
+   padding-bottom:2%;
 }
 
 /* Navbar CSS begins */
@@ -112,19 +102,62 @@ h3{
     border-radius: 3px;
     color: white;
 }
-
-
-
 /* Navbar CSS ends */
 
 /* #Home CSS begins */
+#Home {
+    background-color: #3498DB;
+    color: white;
+}
+
 .carousel-control.left, .carousel-control.right {
-    background-image: none
+    background-image: none;
+}
+
+#Home > h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#Home h3 {
+    text-align: center;
+}
+
+.signup {
+    text-align: center;
+    margin: 15px 0 5px 0;
+}
+
+.signup a {
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2em;
+    color: black;
+    
+    /* colorzilla (http://www.colorzilla.com/gradient-editor/) */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 1%, #ecf0f1 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#ecf0f1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 1%,#ecf0f1 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 1%,#ecf0f1 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 1%,#ecf0f1 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 1%,#ecf0f1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ecf0f1',GradientType=0 ); /* IE6-9 */
 }
 
 /* #Home CSS ends */
 
 /* #About CSS begins */
+#About {
+    background-color: #ECF0F1;
+}
+
+#About h2 {
+    text-align: center;
+}
+
+#About h3 {
+    text-align: center;
+}
+
 #About > div {
     text-align: justify;
 }
@@ -239,7 +272,7 @@ h3{
     color: #3498DB;
 }
 
-.event-heading h3 {
+.event-heading h4 {
     color: #3498DB;
     padding-bottom: 10px;
     margin-top: 10px;
@@ -271,7 +304,22 @@ h3{
 /* Events CSS ends */
 
 /* Scoreboard CSS begins */
+#Scoreboard > div {
+    overflow-x: scroll;
+}
+
+#scoretable {
+    background-color: white;
+    max-width: 200%;    /* overwrite bootstrap's 100%, which change the background coloring */
+}
 /* Scoreboard CSS ends */
+
+/* Social CSS begins */
+.tagboard {
+    height: 500px;
+    overflow-y: scroll;
+}
+/* Social CSS ends */
 
 /* Sponsors CSS begins */
 #Sponsors {
@@ -283,6 +331,7 @@ h3{
 .sponsor-logo {
     width: 95%;
     margin-left: 2.5%;
+    margin-top: 25px;
     /*border: 1px solid green;*/
 }
 
@@ -293,11 +342,35 @@ h3{
 
 #Sponsors img {
     width: 99%;
-    margin-top: 25px;
 }
 /* Sponsors CSS ends */
 
 /* Contact CSS begins */
+#Contact {
+    background-color: #ECF0F1;
+    padding-top: 10px;
+}
+
+.social-media {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-media li:last-child {
+    margin-right: 0px;
+}
+
+.social-media li a {
+    color: #3498DB;
+    font-size: 2.5em;
+}
+
 /* Contact CSS ends */
 
 footer {
