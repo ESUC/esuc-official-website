@@ -26,6 +26,10 @@ module.exports = function(app, sendgrid) {
 		res.render('reservation');
 	});
 
+	app.get('/eventflyers', function(req, res) {
+		res.render('eventflyers');
+	});
+
 	app.get('/major-events',function(req,res) {
 		res.render('major-events');
 	});

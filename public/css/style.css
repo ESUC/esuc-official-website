@@ -69,12 +69,18 @@ a:hover {
 #calendar .sub-menu {
 	left:0px;
 }
+#events .sub-menu {
+	left:0px;
+}
 
 #sponsor .sub-menu {
 	left:0px;
 }
 
 #calendar:hover .sub-menu,#calendar:active .sub-menu, #sponsor:hover .sub-menu,#sponsor:active .sub-menu  {
+	display:block;
+}
+#events:hover .sub-menu,#events:active .sub-menu, #sponsor:hover .sub-menu,#sponsor:active .sub-menu  {
 	display:block;
 }
 
