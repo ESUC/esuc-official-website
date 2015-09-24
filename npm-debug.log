@@ -1,0 +1,82 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'ejs-local', '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'ejs-local', null ]
+6 verbose cache add name=undefined spec="ejs-local" args=["ejs-local",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'ejs-local',
+7 verbose parsed url   path: 'ejs-local',
+7 verbose parsed url   href: 'ejs-local' }
+8 silly lockFile a5c7450e-ejs-local ejs-local
+9 verbose lock ejs-local /Users/avikejariwal/.npm/a5c7450e-ejs-local.lock
+10 silly lockFile a5c7450e-ejs-local ejs-local
+11 silly lockFile a5c7450e-ejs-local ejs-local
+12 verbose addNamed [ 'ejs-local', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 81777c05-ejs-local ejs-local@
+15 verbose lock ejs-local@ /Users/avikejariwal/.npm/81777c05-ejs-local.lock
+16 silly addNameRange { name: 'ejs-local', range: '*', hasData: false }
+17 verbose request where is /ejs-local
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 9ba513ba8141ed28
+20 verbose url raw /ejs-local
+21 verbose url resolving [ 'https://registry.npmjs.org/', './ejs-local' ]
+22 verbose url resolved https://registry.npmjs.org/ejs-local
+23 verbose request where is https://registry.npmjs.org/ejs-local
+24 info trying registry request attempt 1 at 16:58:44
+25 http GET https://registry.npmjs.org/ejs-local
+26 http 404 https://registry.npmjs.org/ejs-local
+27 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 verbose headers   'content-type': 'application/json',
+27 verbose headers   'cache-control': 'max-age=0',
+27 verbose headers   'content-length': '51',
+27 verbose headers   'accept-ranges': 'bytes',
+27 verbose headers   date: 'Thu, 30 Jul 2015 11:28:46 GMT',
+27 verbose headers   via: '1.1 varnish',
+27 verbose headers   age: '0',
+27 verbose headers   connection: 'keep-alive',
+27 verbose headers   'x-served-by': 'cache-sin6922-SIN',
+27 verbose headers   'x-cache': 'MISS',
+27 verbose headers   'x-cache-hits': '0',
+27 verbose headers   'x-timer': 'S1438255726.481778,VS0,VE250' }
+28 silly registry.get cb [ 404,
+28 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=0',
+28 silly registry.get     'content-length': '51',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     date: 'Thu, 30 Jul 2015 11:28:46 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     connection: 'keep-alive',
+28 silly registry.get     'x-served-by': 'cache-sin6922-SIN',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1438255726.481778,VS0,VE250' } ]
+29 silly lockFile 81777c05-ejs-local ejs-local@
+30 silly lockFile 81777c05-ejs-local ejs-local@
+31 error 404 404 Not Found: ejs-local
+31 error 404
+31 error 404 'ejs-local' is not in the npm registry.
+31 error 404 You should bug the author to publish it
+31 error 404 It was specified as a dependency of 'esuc'
+31 error 404
+31 error 404 Note that you can also install from a
+31 error 404 tarball, folder, or http url, or git url.
+32 error System Darwin 14.0.0
+33 error command "node" "/usr/local/bin/npm" "install" "ejs-local" "--save"
+34 error cwd /Users/avikejariwal/Documents/ESUC /esuc-official-website
+35 error node -v v0.10.35
+36 error npm -v 1.4.28
+37 error code E404
+38 verbose exit [ 1, true ]
