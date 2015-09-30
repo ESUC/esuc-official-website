@@ -2,6 +2,11 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+.carousel-control {
+  padding-top:10%;
+  width:5%;
+}
+
 a:hover {
 	text-decoration: none;
 	cursor:pointer;
@@ -15,6 +20,12 @@ a:hover {
 #header {
 	height:150px;
 	background-color:#225A9D;
+}
+
+#headerSpecial {
+	height:100px;
+	background-color:#225A9D;
+
 }
 
 #header-title, #header-title span, #footer-title, #footer-title span {
