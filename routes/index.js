@@ -30,6 +30,10 @@ module.exports = function(app, sendgrid) {
 		res.render('eventflyers');
 	});
 
+	app.get('/uploadflyer', function(req, res){
+		res.render('uploadflyers');
+	});
+
 	app.get('/major-events',function(req,res) {
 		res.render('major-events');
 	});
