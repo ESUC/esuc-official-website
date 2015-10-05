@@ -225,6 +225,8 @@ a:hover {
 
 #gallery-carousel {
 	top:-50px;
+
+
 }
 
 /**CAROUSEL END**/
@@ -484,10 +486,16 @@ a:hover {
 /*===================LARGE SCREEN END===================*/
 
 /*===================DESKTOP SCREEN BEGIN===================*/
-@media only screen and (min-width:1200px) {
+/*@media only screen and (min-width:1200px) {
 	.carouselImg {
 		position: relative;
-		left:97px;
+		left: 15%;
+		max-height: 600px;
+	}*/
+
+	.carouselImg {
+		position: relative;
+		max-height: 600px;
 	}
 
 	
