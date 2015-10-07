@@ -18,6 +18,10 @@ module.exports = function(app, sendgrid) {
 		res.render('lounge-calendar');
 	});
 
+	app.get('/eventflyers1', function(req, res) {
+		res.render('eventflyers')
+	});
+
 	app.get('/engineering-calendar',function(req,res) {
 		res.render('engineering-calendar');
 	});
@@ -27,7 +31,7 @@ module.exports = function(app, sendgrid) {
 	});
 
 	app.get('/eventflyers', function(req, res) {
-		res.render('eventflyers');
+		res.render('flyersForDB');
 	});
 
 	app.get('/uploadflyer', function(req, res){
