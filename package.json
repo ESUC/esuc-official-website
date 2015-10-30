@@ -4,7 +4,8 @@
   "description": "The official website for the Engineering Society of University of California, Los Angeles",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [
     "esuc",
@@ -25,6 +26,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ESUC/esuc-official-website.git"
-  }
+    "url": "git+https://github.com/ESUC/esuc-official-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ESUC/esuc-official-website/issues"
+  },
+  "homepage": "https://github.com/ESUC/esuc-official-website#readme",
+  "devDependencies": {}
 }
