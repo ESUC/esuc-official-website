@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "The official website for the Engineering Society of University of California, Los Angeles",
   "main": "server.js",
+  "engines": {
+    "node" : "0.10.35"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
