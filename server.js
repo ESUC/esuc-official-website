@@ -5,7 +5,7 @@ var port     = process.env.PORT || 8080;
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var sendgrid  = require('sendgrid')('esuc-ucla', 'Uclaesuc2015');
+var sendgrid  = require('sendgrid')('esuc-ucla2016', 'esuc2016');
 var formidable = require('formidable');
 var  util = require('util');
 var fs   = require('fs-extra');
@@ -28,31 +28,11 @@ app.post('/upload', function (req, res){
   var form = new formidable.IncomingForm();
   var name;
   form.parse(req, function(err, fields, files) {
-    /*res.writeHead(200, {'content-type': 'text/plain'});
-    res.write('received upload:\n\n');
-    res.end(util.inspect({fields: fields, files: files}));
-    res.render('uploadsuccess');
-    res.end();
-    //console.log(JSON.stringify(fields.title) + " " + JSON.stringify(fields.email));
-    name = fields.title;
-    if (JSON.stringify(files.upload.name) == null)
-    {
-      console.log("Error no file submitted");
-    }
-    var requestDetails =  [{"eventName": " ", "organizationName": " ", "contactEmail" : " ", "fileName" : " "}];
-    requestDetails[0].eventName = fields.title;
-    requestDetails[0].organizationName = fields.org;
-    requestDetails[0].contactEmail = fields.email;
-    requestDetails[0].fileName = files.upload.name;
-    //console.log(JSON.stringify(requestDetails.eventName));
-
-    fs.appendFile('uploads/flierList.txt', JSON.stringify(requestDetails[0])+"\r\n", 'utf8', function(){});*/
-    
-
     res.render('uploadsuccess');
     res.end();
     console.log(fields);
     console.log(files);
+
     myFirebaseRef.child("events").push({
       eventName: fields.title,
       eventDate: fields.my_date_input,
@@ -60,28 +40,23 @@ app.post('/upload', function (req, res){
       organizationName: fields.org,
       organizationEmail: fields.email,
       moderated: false,
-      flierSubmitted: false
+      flierName: files.upload.name
     })
-  });
+    var subjectLine = null;
+    if (files.upload.name != null) { 
+        subjectLine = "Flier Added: " + files.upload.name;
+    }
 
-form.on('end', function(fields, files) {
-  /* Temporary location of our uploaded file */
-  var temp_path = this.openedFiles[0].path;
-  /* The file name of the uploaded file */
-  var file_name = this.openedFiles[0].name;
-  /* Location where we want to copy the uploaded file */
-  var new_location = 'public/img/events/';
-
-  fs.copy(temp_path, new_location + file_name, function(err) {  
-    if (err) {
-      console.error(err);
-        //alert("Submission unsuccesful!");
-      } else {
-        console.log("success!");
-        
-      }
+    sendgrid.send({
+      to:       'esuc.ucla.webmaster@gmail.com',
+      from:     'esuc.ucla.webmaster@gmail.com',
+      subject:  'New Event Added to Calender. ' + subjectLine,
+      text:     'New Event Added! Please Review'
+    }, function(err, json) {
+      if (err) { return console.error(err); }
+      console.log(json);
     });
-});
+  });
 });
 
 
