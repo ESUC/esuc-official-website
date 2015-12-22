@@ -10,6 +10,8 @@ var formidable = require('formidable');
 var  util = require('util');
 var fs   = require('fs-extra');
 var qt   = require('quickthumb');
+var Firebase = require("firebase");
+var myFirebaseRef = new Firebase("https://esuc-ucla-eventflyer.firebaseio.com/");
 
 
 // use ===============================================================
@@ -28,7 +30,7 @@ app.post('/upload', function (req, res){
   form.parse(req, function(err, fields, files) {
     /*res.writeHead(200, {'content-type': 'text/plain'});
     res.write('received upload:\n\n');
-    res.end(util.inspect({fields: fields, files: files}));*/
+    res.end(util.inspect({fields: fields, files: files}));
     res.render('uploadsuccess');
     res.end();
     //console.log(JSON.stringify(fields.title) + " " + JSON.stringify(fields.email));
@@ -44,27 +46,42 @@ app.post('/upload', function (req, res){
     requestDetails[0].fileName = files.upload.name;
     //console.log(JSON.stringify(requestDetails.eventName));
 
-    fs.appendFile('uploads/flierList.txt', JSON.stringify(requestDetails[0])+"\r\n", 'utf8', function(){});
+    fs.appendFile('uploads/flierList.txt', JSON.stringify(requestDetails[0])+"\r\n", 'utf8', function(){});*/
+    
+
+    res.render('uploadsuccess');
+    res.end();
+    console.log(fields);
+    console.log(files);
+    myFirebaseRef.child("events").push({
+      eventName: fields.title,
+      eventDate: fields.my_date_input,
+      eventTime: fields.timepicker_input,
+      organizationName: fields.org,
+      organizationEmail: fields.email,
+      moderated: false,
+      flierSubmitted: false
+    })
   });
 
-  form.on('end', function(fields, files) {
-    /* Temporary location of our uploaded file */
-    var temp_path = this.openedFiles[0].path;
-    /* The file name of the uploaded file */
-    var file_name = this.openedFiles[0].name;
-    /* Location where we want to copy the uploaded file */
-    var new_location = 'public/img/events/';
+form.on('end', function(fields, files) {
+  /* Temporary location of our uploaded file */
+  var temp_path = this.openedFiles[0].path;
+  /* The file name of the uploaded file */
+  var file_name = this.openedFiles[0].name;
+  /* Location where we want to copy the uploaded file */
+  var new_location = 'public/img/events/';
 
-    fs.copy(temp_path, new_location + file_name, function(err) {  
-      if (err) {
-        console.error(err);
+  fs.copy(temp_path, new_location + file_name, function(err) {  
+    if (err) {
+      console.error(err);
         //alert("Submission unsuccesful!");
       } else {
         console.log("success!");
         
       }
     });
-  });
+});
 });
 
 
