@@ -59,7 +59,7 @@ app.post('/upload', function (req, res){
     console.log("Flier Added " + flierAdded);
     if (flierAdded) {
 
-      cloudinary.uploader.upload(flierImage.path, function(result) {
+        cloudinary.uploader.upload(flierImage.path, function(result) {
         temp_name = result.public_id;
         console.log(temp_name);
         console.log(result);
@@ -73,7 +73,8 @@ app.post('/upload', function (req, res){
           moderated: false,
           flierAdded: flierAdded,
           flierName: flierImage.name,
-          cloudinaryName: temp_name
+          cloudinaryName: temp_name,
+          cloudinaryURL: result.url
         });
 
         urllink = firebaseObject.toString();
@@ -105,7 +106,7 @@ app.post('/upload', function (req, res){
       console.log(json);
     });
 
-  });
+});
 });
 
 
