@@ -26,9 +26,13 @@
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<!--CDN END-->
+	<!--CLOUDINARY JS-->
+	<script type="text/javascript" src="lib/cloudinary/js/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="lib/cloudinary/js/jquery.iframe-transport.js"></script>
+	<script type="text/javascript" src="lib/cloudinary/js/jquery.fileupload.js"></script>
+	<script type="text/javascript" src="lib/cloudinary/js/jquery.cloudinary.js"></script>
 	<!--TIME AND DATE PICKER JS-->
 	<script type="text/javascript" src="lib/timePicker/ng_all.js"></script>
-	<script type="text/javascript" src="lib/timePicker/ng_ui.js"></script>
 	<script type="text/javascript" src="lib/timePicker/components/timepicker.js"></script>
 	<script type="text/javascript" src="lib/timePicker/components/calendar.js"></script>
 	<!--LOCAL BEGIN-->
@@ -66,7 +70,7 @@
 			Time:          <input type="text" id="timepicker_input" name="timepicker_input" value="4:20 pm"/><br><br>
 			Name of Organization: <input name="org" type="text" /><br><br>
 			Contact Email:  <input name="email" type="text" /><br><br>
-			Add Flyer for Display Board (Optional): <input multiple="multiple" name="upload" type="file" /><br><br>
+			Add Flyer for Display Board (Optional): <input multiple="multiple" id="flierImage" name="flierImage" type="file" /><br><br>
 			<input class='btn' type="submit" value="Upload" /></form>
 
 		</div>
