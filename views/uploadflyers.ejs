@@ -15,7 +15,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Source+Sans+Pro' rel='stylesheet' type='text/css'>
 	<link href='lib/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 	<link href='lib/bootstrap/css/bootstrap-theme.min.css' rel='stylesheet' type='text/css'>
-
+	<link href='lib/TimePicki-master/css/timepicki.css' rel='stylesheet' type='text/css'>
 	<link href='css/reset.css' rel='stylesheet' type='text/css'>
 	<link href='css/style.css' rel='stylesheet' type='text/css'>
 	<link href='css/flyerform.css' rel='stylesheet' type='text/css'>
@@ -38,12 +38,11 @@
 	<!--LOCAL BEGIN-->
 	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="lib/TimePicki-master/js/timepicki.js"></script>
 	<script>
-		ng.ready( function() {
-			var tp = new ng.TimePicker({
-	        input: 'timepicker_input',  // the input field id
+		$(document).ready(function(){
+			$(".time_element").timepicki();
 
-	    });
 			var my_cal = new ng.Calendar({
 				input:'my_date_input'
 			});
@@ -64,15 +63,39 @@
 	<div class="container">
 		<h1>Enter your event on the Engineering Society Calender! 
 		</h1>
-		<form action="/upload" enctype="multipart/form-data" method="post">
-			Name of Event: <input name="title" type="text" /><br><br>
-			Date:          <input type="text" id="my_date_input" name="my_date_input"><br><br>
-			Time:          <input type="text" id="timepicker_input" name="timepicker_input" value="4:20 pm"/><br><br>
-			Name of Organization: <input name="org" type="text" /><br><br>
-			Contact Email:  <input name="email" type="text" /><br><br>
-			Add Flyer for Display Board (Optional): <input multiple="multiple" id="flierImage" name="flierImage" type="file" /><br><br>
-			<input class='btn' type="submit" value="Upload" /></form>
-
+		<form  action="/upload" enctype="multipart/form-data" method="post">
+			<table>
+				<tr>
+					<td>Event Name:</td>
+					<td><input class="form-control" name="title" type="text" required></td>
+				</tr>
+				<tr>
+					<td>Location:</td>
+					<td><input class="form-control" name="location" type="text" required></td>
+				</tr>
+				<tr>
+					<td>Date:  </td>
+					<td> <input  class="form-control" type="text" id="my_date_input" name="my_date_input"></td>
+				</tr>
+				<tr>
+					<td>Time:  </td>
+					<td> <input type="text" name="timepicker_input" class="form-control time_element"></td>
+				</tr>
+				<tr>
+					<td>Organization Name:  </td>
+					<td> <input class="form-control" name="org" type="text" /></td>
+				</tr>
+				<tr>
+					<td>Contact Email:  </td>
+					<td> <input name="email" type="email" class="form-control" /></td>
+				</tr>
+				<tr>
+					<td>Add Flyer for Display Board (Optional):  </td>
+					<td><input multiple="multiple" id="flierImage" name="flierImage" type="file" /></td>
+				</tr>
+			</table>
+			<input class='btn' type="submit" value="Submit" />
+			</form>	
 		</div>
 
 		<!--FOOTER BEGIN-->

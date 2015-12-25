@@ -38,8 +38,8 @@
 	outline:none;
 	cursor:inherit;}
 	
-.ng-button-icon-span {display:inline-block;}
-.ng-button-icon-span img {display:block;}
+.ng-button-icon-span {display:inline;}
+.ng-button-icon-span img {display:inline;}
 
 .ng-button-text-span {padding:0px 5px;}
 
@@ -586,7 +586,9 @@
 	
 /* components input and button */
 .ng-input-button-container {white-space:nowrap;}
-.ng-input-button-container .ng-button {padding:0px 2px;
+.ng-input-button-container .ng-button {
+	display:none;
+	padding:0px 2px;
 	margin:0px;
 	-webkit-border-top-left-radius: 0px;
 	-webkit-border-bottom-left-radius: 0px;

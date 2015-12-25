@@ -13,6 +13,7 @@ var qt   = require('quickthumb');
 var Firebase = require("firebase");
 var myFirebaseRef = new Firebase("https://esuc-ucla-eventflyer.firebaseio.com/");
 var cloudinary = require('cloudinary');
+var validator = require('validator');
 
 cloudinary.config({ 
   cloud_name: 'hvlcm1lid', 
@@ -71,15 +72,13 @@ app.post('/upload', function (req, res){
           organizationName: eventFields.org,
           organizationEmail: eventFields.email,
           moderated: false,
+          location: eventFields.location,
           flierAdded: flierAdded,
           flierName: flierImage.name,
           cloudinaryName: temp_name,
           cloudinaryURL: result.url
         });
-
-        urllink = firebaseObject.toString();
       });
-
     }
     else {
       firebaseObject = myFirebaseRef.child("events").push({
@@ -91,10 +90,8 @@ app.post('/upload', function (req, res){
         moderated: false,
         flierAdded: flierAdded
       });
-
-      urllink = firebaseObject.toString();
     }
-    
+    urllink = firebaseObject.toString();
 
     sendgrid.send({
       to:       'esuc.ucla.webmaster@gmail.com',
