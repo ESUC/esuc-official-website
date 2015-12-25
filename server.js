@@ -13,7 +13,6 @@ var qt   = require('quickthumb');
 var Firebase = require("firebase");
 var myFirebaseRef = new Firebase("https://esuc-ucla-eventflyer.firebaseio.com/");
 var cloudinary = require('cloudinary');
-var validator = require('validator');
 
 cloudinary.config({ 
   cloud_name: 'hvlcm1lid', 
