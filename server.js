@@ -28,14 +28,31 @@ app.use(bodyParser.urlencoded());
 app.use(express.static(__dirname+'/public'));
 app.use(qt.static(__dirname + '/'));
 
-
+var formatTime = function (time) {
+  var temp = time;
+  var temp1 = time.split(':');
+  var hrs = parseInt(temp1[0]);
+  var temp2 = temp1[1].split(' ');
+  var min = temp2[0];
+  var mer = temp2[1];
+  if (mer == "PM" && hrs != 12) {
+    hrs+=12;
+  }
+  if (mer == "AM" && hrs == 12) {
+    hrs=0;
+  }
+  console.log(hrs);
+  console.log(min);
+  var timeVal = hrs * 60 * 60 * 1000 + min * 60 * 1000;
+  return timeVal;
+}
 // uploading flyer pictures ========================================
 app.post('/upload', function (req, res){
   var form = new formidable.IncomingForm();
   var eventFields;
   var flierImage;
   var flierAdded = false;
-  var subjectLine = null;
+  var subjectLine = "";
 
   form.parse(req, function(err, fields, files) {
     res.render('uploadsuccess');
@@ -57,17 +74,20 @@ app.post('/upload', function (req, res){
     var firebaseObject = [];
     var urllink = null;
     console.log("Flier Added " + flierAdded);
+    var eventTimeMs = formatTime(eventFields.timepicker_input);
     if (flierAdded) {
 
-        cloudinary.uploader.upload(flierImage.path, function(result) {
+      cloudinary.uploader.upload(flierImage.path, function(result) {
         temp_name = result.public_id;
         console.log(temp_name);
         console.log(result);
+
 
         firebaseObject = myFirebaseRef.child("events").push({
           eventName: eventFields.title,
           eventDate: eventFields.my_date_input,
           eventTime: eventFields.timepicker_input,
+          eventTimeMs: eventTimeMs,
           organizationName: eventFields.org,
           organizationEmail: eventFields.email,
           moderated: false,
@@ -84,12 +104,15 @@ app.post('/upload', function (req, res){
         eventName: eventFields.title,
         eventDate: eventFields.my_date_input,
         eventTime: eventFields.timepicker_input,
+        eventTimeMs: eventTimeMs,
         organizationName: eventFields.org,
+        location: eventFields.location,
         organizationEmail: eventFields.email,
         moderated: false,
         flierAdded: flierAdded
       });
     }
+
     urllink = firebaseObject.toString();
 
     sendgrid.send({
@@ -102,9 +125,8 @@ app.post('/upload', function (req, res){
       console.log(json);
     });
 
+  });
 });
-});
-
 
 
 //set
