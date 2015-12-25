@@ -35,3 +35,18 @@
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+
+th, td {
+    padding: 5px;
+    width: auto;
+}
+
+
+form .btn {
+  position:relative;
+  left:50%;
+}
+
+.form-control {
+  height: 30px !important;
+}

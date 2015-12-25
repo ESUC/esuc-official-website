@@ -4,8 +4,8 @@
 	<!--WELCOME TO THE OFFICIAL WEBSITE OF THE ENGINEERING SOCIETY OF UCLA-->
 
 	<!--META BEGIN-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="keywords" content="esuc, engineering society of ucla, ucla, engineering, society, university of california, university of california, los angeles">
 	<meta name="description" content="The Engineering Society of UCLA (ESUC) is the umbrella organization for all of the various engineering and technical societies at UCLA.">
 	<meta name="author" content="Vic Yeh">
@@ -15,44 +15,94 @@
 	<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Source+Sans+Pro' rel='stylesheet' type='text/css'>
 	<link href='lib/bootstrap/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
 	<link href='lib/bootstrap/css/bootstrap-theme.min.css' rel='stylesheet' type='text/css'>
-
+	<link href='lib/TimePicki-master/css/timepicki.css' rel='stylesheet' type='text/css'>
 	<link href='css/reset.css' rel='stylesheet' type='text/css'>
 	<link href='css/style.css' rel='stylesheet' type='text/css'>
 	<link href='css/flyerform.css' rel='stylesheet' type='text/css'>
 	<!--LINKS END-->
 	<!--CDN BEGIN-->
 	<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<!--CDN END-->
+	<!--CLOUDINARY JS-->
+	<script type="text/javascript" src="lib/cloudinary/js/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="lib/cloudinary/js/jquery.iframe-transport.js"></script>
+	<script type="text/javascript" src="lib/cloudinary/js/jquery.fileupload.js"></script>
+	<script type="text/javascript" src="lib/cloudinary/js/jquery.cloudinary.js"></script>
+	<!--TIME AND DATE PICKER JS-->
+	<script type="text/javascript" src="lib/timePicker/ng_all.js"></script>
+	<script type="text/javascript" src="lib/timePicker/components/timepicker.js"></script>
+	<script type="text/javascript" src="lib/timePicker/components/calendar.js"></script>
 	<!--LOCAL BEGIN-->
 	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="lib/TimePicki-master/js/timepicki.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".time_element").timepicki();
+
+			var my_cal = new ng.Calendar({
+				input:'my_date_input'
+			});
+		});
+	</script>
+
 	<!--LOCAL END-->
 
 </head>
 
 <body>
-<!--HEADER BEGIN-->
-<div>
-	<% include partial/header %>
-</div>
-<!--HEADER END-->
+	<!--HEADER BEGIN-->
+	<div>
+		<% include partial/header %>
+	</div>
+	<!--HEADER END-->
 
-<div class="container">
-<h1>Upload your organizations flyer</h1>
-	<form action="/upload" enctype="multipart/form-data" method="post">
-		Name of Event: <input name="title" type="text" /><br><br>
-		Email:  <input name="email" type="text" /><br><br>
-		Name of Organization: <input name="org" type="text" /><br><br>
-		<input multiple="multiple" name="upload" type="file" /><br><br>
-		<input class='btn' type="submit" value="Upload" /></form>
+	<div class="container">
+		<h1>Enter your event on the Engineering Society Calender! 
+		</h1>
+		<form  action="/upload" enctype="multipart/form-data" method="post">
+			<table>
+				<tr>
+					<td>Event Name:</td>
+					<td><input class="form-control" name="title" type="text" required></td>
+				</tr>
+				<tr>
+					<td>Location:</td>
+					<td><input class="form-control" name="location" type="text" required></td>
+				</tr>
+				<tr>
+					<td>Date:  </td>
+					<td> <input  class="form-control" type="text" id="my_date_input" name="my_date_input"></td>
+				</tr>
+				<tr>
+					<td>Time:  </td>
+					<td> <input type="text" name="timepicker_input" class="form-control time_element"></td>
+				</tr>
+				<tr>
+					<td>Organization Name:  </td>
+					<td> <input class="form-control" name="org" type="text" /></td>
+				</tr>
+				<tr>
+					<td>Contact Email:  </td>
+					<td> <input name="email" type="email" class="form-control" /></td>
+				</tr>
+				<tr>
+					<td>Add Flyer for Display Board (Optional):  </td>
+					<td><input multiple="multiple" id="flierImage" name="flierImage" type="file" /></td>
+				</tr>
+			</table>
+			<input class='btn' type="submit" value="Submit" />
+			</form>	
+		</div>
 
-</div>
+		<!--FOOTER BEGIN-->
+		<div>
+			<% include partial/footer %>
+		</div>
+		<!--FOOTER END-->
 
-<!--FOOTER BEGIN-->
-<div>
-	<% include partial/footer %>
-</div>
-<!--FOOTER END-->
-
-</body>
-</html>
+	</body>
+	</html>
