@@ -31,11 +31,15 @@ module.exports = function(app, sendgrid) {
 	});
 
 	app.get('/eventflyers', function(req, res) {
+<<<<<<< HEAD
 		res.render('flyersForDB');
 	});
 
 	app.get('/uploadflyer', function(req, res){
 		res.render('uploadflyers');
+=======
+		res.render('eventflyers');
+>>>>>>> 13634a7cd06934c34ad46bcf30f3b42830eb43b0
 	});
 
 	app.get('/major-events',function(req,res) {
