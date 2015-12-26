@@ -46,6 +46,7 @@ var formatTime = function (time) {
   var timeVal = hrs * 60 * 60 * 1000 + min * 60 * 1000;
   return timeVal;
 }
+
 // uploading flyer pictures ========================================
 app.post('/upload', function (req, res){
   var form = new formidable.IncomingForm();
@@ -97,6 +98,12 @@ app.post('/upload', function (req, res){
           cloudinaryName: temp_name,
           cloudinaryURL: result.url
         });
+      }, 
+      {
+        width: 700,
+        height: 700,
+        crop: fit,
+        format: png
       });
     }
     else {
