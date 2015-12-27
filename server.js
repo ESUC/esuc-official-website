@@ -102,8 +102,8 @@ app.post('/upload', function (req, res){
       {
         width: 700,
         height: 700,
-        crop: fit,
-        format: png
+        crop: "fit",
+        format: "png"
       });
     }
     else {
