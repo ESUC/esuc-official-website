@@ -5,7 +5,7 @@ var port     = process.env.PORT || 8080;
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
-var sendgrid  = require('sendgrid')('esuc-ucla2016', 'esuc2016');
+var sendgrid  = require('sendgrid')(credentials);
 var formidable = require('formidable');
 var util = require('util');
 var fs   = require('fs-extra');
@@ -15,9 +15,7 @@ var myFirebaseRef = new Firebase("https://esuc-ucla-eventflyer.firebaseio.com/")
 var cloudinary = require('cloudinary');
 
 cloudinary.config({ 
-  cloud_name: 'hvlcm1lid', 
-  api_key: '212382412323749', 
-  api_secret: 'nuZQxH_wId3zG-DisGJIgWt8bE4' 
+  //secret
 });
 
 // use ===============================================================
